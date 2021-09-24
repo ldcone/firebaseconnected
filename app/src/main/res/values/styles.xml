@@ -1,7 +1,8 @@
 <resources>
 
   <!-- Base application theme. -->
-  <style name="AppTheme.Posenet" parent="Theme.AppCompat.Light.NoActionBar">
+  <style name="AppTheme.Posenet" parent="Theme.AppCompat.Light.NoActionBar"/>
+  <style name="AppTheme.Picker" parent="android:Theme.Material.Light.NoActionBar.Fullscreen" >
     <item name="colorPrimary">@color/tfe_color_primary</item>
     <item name="colorPrimaryDark">@color/tfe_color_primary_dark</item>
     <item name="colorAccent">@color/tfe_color_accent</item>

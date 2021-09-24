@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.posenet
+package org.tensorflow.lite.examples.posenet.poseestimate
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -25,6 +25,7 @@ import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
+import org.tensorflow.lite.examples.posenet.R
 import org.tensorflow.lite.examples.posenet.lib.Posenet as Posenet
 
 class TestActivity : AppCompatActivity() {

@@ -1,13 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.huawei.hms:ml-computer-sdkbase-inner:2.0.5.301@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/181bdaf953242baa03f0d0d3d0f2abe0/ml-computer-sdkbase-inner-2.0.5.301/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/181bdaf953242baa03f0d0d3d0f2abe0/ml-computer-sdkbase-inner-2.0.5.301/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/181bdaf953242baa03f0d0d3d0f2abe0/ml-computer-sdkbase-inner-2.0.5.301/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/181bdaf953242baa03f0d0d3d0f2abe0/jetified-ml-computer-sdkbase-inner-2.0.5.301/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4e94d08ed1405f25fa9b68019b3891ef/jetified-ml-computer-sdkbase-inner-2.0.5.301/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4e94d08ed1405f25fa9b68019b3891ef/jetified-ml-computer-sdkbase-inner-2.0.5.301/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4e94d08ed1405f25fa9b68019b3891ef/jetified-ml-computer-sdkbase-inner-2.0.5.301/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fd2a27636a529fdf98df2c95b9038a43/transformed/jetified-ml-computer-sdkbase-inner-2.0.5.301/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fd2a27636a529fdf98df2c95b9038a43/transformed/jetified-ml-computer-sdkbase-inner-2.0.5.301/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fd2a27636a529fdf98df2c95b9038a43/transformed/jetified-ml-computer-sdkbase-inner-2.0.5.301/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.huawei.hms/ml-computer-sdkbase-inner/2.0.5.301/da39a3ee5e6b4b0d3255bfef95601890afd80709/ml-computer-sdkbase-inner-2.0.5.301-javadoc.jar!/" />

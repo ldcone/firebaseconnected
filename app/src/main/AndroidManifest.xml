@@ -24,18 +24,23 @@
       android:theme="@style/AppTheme.Posenet">
 
     <activity
-        android:name=".TestActivity"
+        android:name=".poseestimate.CameraActivity"
         android:label="@string/tfe_pn_app_name"
-        android:exported="true"/>
+        android:exported="true">
+    <intent-filter>
+      <action android:name="android.intent.action.MAIN"/>
+      <category android:name="android.intent.category.LAUNCHER"/>
+    </intent-filter>
+  </activity>
 
-    <activity android:name=".CaptureActivity"/>
+    <activity android:name=".poseestimate.TestActivity"/>
 
-    <activity android:name=".CameraActivity" android:exported="true">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-        <category android:name="android.intent.category.LAUNCHER"/>
-      </intent-filter>
-    </activity>
+    <activity android:name=".poseestimate.CaptureActivity"/>
+
+    <activity android:name=".ObjectDetect.CameraActivity"
+        android:exported="true"
+        android:label="EmotionCamera"/>
+
 
   </application>
 

@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-vision-common:19.1.3@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7dc350b39034c8118283522037b5f2a9/jetified-play-services-vision-common-19.1.3/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df755621a947eb1de5fe0da0795debb9/jetified-play-services-vision-common-19.1.3/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df755621a947eb1de5fe0da0795debb9/jetified-play-services-vision-common-19.1.3/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df755621a947eb1de5fe0da0795debb9/jetified-play-services-vision-common-19.1.3/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2f1991609a8822aca4fea8a93ae6bc1f/transformed/jetified-play-services-vision-common-19.1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2f1991609a8822aca4fea8a93ae6bc1f/transformed/jetified-play-services-vision-common-19.1.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2f1991609a8822aca4fea8a93ae6bc1f/transformed/jetified-play-services-vision-common-19.1.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-vision-common/19.1.3/9fc4e0085d07195251e6ab76e780d96d39681f3/play-services-vision-common-19.1.3-javadoc.jar!/" />

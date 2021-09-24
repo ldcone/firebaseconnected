@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.huawei.hms.mlsdk.sounddect.MLSoundDector
+import org.tensorflow.lite.examples.posenet.poseestimate.SoundDetector
 
 class MainViewModel(private val soundDetector: SoundDetector) : ViewModel() {
 

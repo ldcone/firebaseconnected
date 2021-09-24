@@ -1,4 +1,4 @@
-package org.tensorflow.lite.examples.posenet
+package org.tensorflow.lite.examples.posenet.poseestimate
 
 import android.content.Context
 import android.os.Bundle

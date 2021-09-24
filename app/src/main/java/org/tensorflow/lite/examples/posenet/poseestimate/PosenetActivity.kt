@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.posenet
+package org.tensorflow.lite.examples.posenet.poseestimate
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.Dialog
@@ -31,7 +30,6 @@ import android.media.ImageReader
 import android.media.ImageReader.OnImageAvailableListener
 import android.net.Uri
 import android.os.*
-import android.provider.MediaStore
 import android.text.format.DateFormat
 import android.util.Log
 import android.util.Size
@@ -41,8 +39,6 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.gson.Gson
@@ -50,7 +46,7 @@ import com.huawei.hms.mlsdk.sounddect.MLSoundDectListener
 import com.huawei.hms.mlsdk.sounddect.MLSoundDector
 import kotlinx.android.synthetic.main.tfe_pn_activity_posenet.*
 import okhttp3.*
-import org.tensorflow.lite.TensorFlowLite.init
+import org.tensorflow.lite.examples.posenet.*
 import org.tensorflow.lite.examples.posenet.databinding.TfePnActivityPosenetBinding
 import org.tensorflow.lite.examples.posenet.lib.BodyPart
 import org.tensorflow.lite.examples.posenet.lib.Person
@@ -95,6 +91,8 @@ class PosenetActivity :
   /** A shape for extracting frame data.   */
   private val PREVIEW_WIDTH = 640
   private val PREVIEW_HEIGHT = 480
+//  private val PREVIEW_HEIGHT = 1080
+//  private val PREVIEW_WIDTH = 1920
 
   /** An object for the Posenet library.    */
   private lateinit var posenet: Posenet
@@ -376,6 +374,7 @@ class PosenetActivity :
 //        startActivity(intent)
 //      }
 //    }
+
     mlSoundDetector.setSoundDectListener(object : MLSoundDectListener {
       override fun onSoundSuccessResult(result: Bundle) {
         val soundType = result.getInt(MLSoundDector.RESULTS_RECOGNIZED)
@@ -436,23 +435,19 @@ class PosenetActivity :
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     surfaceView = view.findViewById(R.id.surfaceView)
     surfaceHolder = surfaceView!!.holder
-
   }
 
   override fun onResume() {
     super.onResume()
+//    mlSoundDetector.start(requireActivity())
     startBackgroundThread()
-
-
   }
 
   override fun onStart() {
     super.onStart()
     openCamera()
-    mlSoundDetector.start(requireActivity())
+
     posenet = Posenet(this.requireContext())
-
-
   }
 
   override fun onPause() {
@@ -666,6 +661,7 @@ class PosenetActivity :
     }
   }
 
+  var switching = 1
   /** A [OnImageAvailableListener] to receive frames as they are available.  */
   private var imageAvailableListener = object : OnImageAvailableListener {
     override fun onImageAvailable(imageReader: ImageReader) {
@@ -704,8 +700,34 @@ class PosenetActivity :
         rotateMatrix, true
       )
       image.close()
+      //classifyFrame() bitmap넣어서 facedetect해주기
 
       processImage(rotatedBitmap)
+      binding.btnTake.setOnClickListener {
+        if(switching == 1){
+          Log.d("done","done")
+          val intent = Intent(requireActivity(), org.tensorflow.lite.examples.posenet.ObjectDetect.CameraActivity::class.java)
+          ActivityCompat.finishAffinity(requireActivity())
+          requireActivity().overridePendingTransition(0,0)
+          activity?.finish()
+          startActivity(intent)
+//          onDestroy()
+          requireActivity().overridePendingTransition(0,0)
+          switching = 0
+        }else{
+          Log.d("start","start")
+
+          onPause()
+          switching = 1
+        }
+
+//      takepicture(scaledBitmap)
+
+//        Log.d("working?","working")
+//        takeScreenshot(bitmap)
+//        startdldetect()
+      }
+//      processImage(rotatedBitmap)
 
     }
   }
@@ -786,9 +808,6 @@ class PosenetActivity :
       paint
     )
 
-
-
-
     val widthRatio = screenWidth.toFloat() / MODEL_WIDTH
     val heightRatio = screenHeight.toFloat() / MODEL_HEIGHT
 
@@ -815,8 +834,6 @@ class PosenetActivity :
             )
             println("falldetected")
             takeScreenshot(bitmap)
-
-
           }
         }
 
@@ -889,12 +906,7 @@ class PosenetActivity :
         }
 
       }
-      binding.btnTake.setOnClickListener {
-//      takepicture(scaledBitmap)
 
-//        Log.d("working?","working")
-//        takeScreenshot(bitmap)
-      }
     }
 
 
@@ -964,6 +976,8 @@ class PosenetActivity :
       imageReader = ImageReader.newInstance(
         previewSize!!.width, previewSize!!.height, ImageFormat.YUV_420_888, 2
       )
+
+
       imageReader!!.setOnImageAvailableListener(imageAvailableListener, backgroundHandler)
 
       // This is the surface we need to record images for processing.

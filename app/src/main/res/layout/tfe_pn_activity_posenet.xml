@@ -64,9 +64,9 @@
 
   <ImageView
       android:id="@+id/img_captured"
-      android:layout_width="312dp"
-      android:layout_height="550dp"
-      app:srcCompat="@drawable/edittext_layout"
-      android:layout_centerInParent="true"/>
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      app:srcCompat="@drawable/edittext_layout" />
 
 </RelativeLayout>

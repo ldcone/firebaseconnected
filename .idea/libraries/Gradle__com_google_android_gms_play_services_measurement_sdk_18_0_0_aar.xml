@@ -1,13 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-measurement-sdk:18.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0c65914457e176dc1ce0d4a77a714463/play-services-measurement-sdk-18.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0c65914457e176dc1ce0d4a77a714463/play-services-measurement-sdk-18.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0c65914457e176dc1ce0d4a77a714463/play-services-measurement-sdk-18.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0c65914457e176dc1ce0d4a77a714463/jetified-play-services-measurement-sdk-18.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/61b2d70663501b3f3741f0c4281fbfac/jetified-play-services-measurement-sdk-18.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/61b2d70663501b3f3741f0c4281fbfac/jetified-play-services-measurement-sdk-18.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/61b2d70663501b3f3741f0c4281fbfac/jetified-play-services-measurement-sdk-18.0.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c4efacbea7d49a6ec1eec972ef007647/transformed/jetified-play-services-measurement-sdk-18.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c4efacbea7d49a6ec1eec972ef007647/transformed/jetified-play-services-measurement-sdk-18.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c4efacbea7d49a6ec1eec972ef007647/transformed/jetified-play-services-measurement-sdk-18.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-sdk/18.0.0/6a8b08d2a93001c8d089863beda57683994fb63d/play-services-measurement-sdk-18.0.0-javadoc.jar!/" />

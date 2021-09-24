@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.posenet
+package org.tensorflow.lite.examples.posenet.poseestimate
 
 import android.Manifest
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
+import org.tensorflow.lite.examples.posenet.R
+import org.tensorflow.lite.examples.posenet.REQUEST_CAMERA_PERMISSION
 
 /**
  * Shows OK/Cancel confirmation dialog about camera permission.

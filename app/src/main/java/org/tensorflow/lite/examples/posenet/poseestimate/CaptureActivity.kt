@@ -1,11 +1,9 @@
-package org.tensorflow.lite.examples.posenet
+package org.tensorflow.lite.examples.posenet.poseestimate
 
-import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_capture.*
 import org.tensorflow.lite.examples.posenet.databinding.ActivityCaptureBinding
 
 class CaptureActivity: AppCompatActivity() {

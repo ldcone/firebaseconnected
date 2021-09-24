@@ -1,13 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.huawei.hms:ml-speech-semantics-sounddect-model:2.1.0.300@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7652ff92b6dbea1ed63242fd9d009178/ml-speech-semantics-sounddect-model-2.1.0.300/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7652ff92b6dbea1ed63242fd9d009178/ml-speech-semantics-sounddect-model-2.1.0.300/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7652ff92b6dbea1ed63242fd9d009178/ml-speech-semantics-sounddect-model-2.1.0.300/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7652ff92b6dbea1ed63242fd9d009178/jetified-ml-speech-semantics-sounddect-model-2.1.0.300/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e02d476cdb4407e5c555927fec3df6de/jetified-ml-speech-semantics-sounddect-model-2.1.0.300/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e02d476cdb4407e5c555927fec3df6de/jetified-ml-speech-semantics-sounddect-model-2.1.0.300/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e02d476cdb4407e5c555927fec3df6de/jetified-ml-speech-semantics-sounddect-model-2.1.0.300/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/dc3816ec614615a5836331f6553a1a71/transformed/jetified-ml-speech-semantics-sounddect-model-2.1.0.300/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dc3816ec614615a5836331f6553a1a71/transformed/jetified-ml-speech-semantics-sounddect-model-2.1.0.300/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dc3816ec614615a5836331f6553a1a71/transformed/jetified-ml-speech-semantics-sounddect-model-2.1.0.300/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.huawei.hms/ml-speech-semantics-sounddect-model/2.1.0.300/da39a3ee5e6b4b0d3255bfef95601890afd80709/ml-speech-semantics-sounddect-model-2.1.0.300-javadoc.jar!/" />

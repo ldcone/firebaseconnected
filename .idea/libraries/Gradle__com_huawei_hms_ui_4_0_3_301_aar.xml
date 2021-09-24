@@ -1,12 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.huawei.hms:ui:4.0.3.301@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d715b3041faa14f8afc0553eb8e4af2d/ui-4.0.3.301/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d715b3041faa14f8afc0553eb8e4af2d/ui-4.0.3.301/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d715b3041faa14f8afc0553eb8e4af2d/ui-4.0.3.301/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/170ca169b10986de40529c1fe4365b32/jetified-ui-4.0.3.301/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/170ca169b10986de40529c1fe4365b32/jetified-ui-4.0.3.301/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/170ca169b10986de40529c1fe4365b32/jetified-ui-4.0.3.301/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2491b4677ec9197c908a30ebdbad91ed/transformed/jetified-ui-4.0.3.301/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2491b4677ec9197c908a30ebdbad91ed/transformed/jetified-ui-4.0.3.301/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2491b4677ec9197c908a30ebdbad91ed/transformed/jetified-ui-4.0.3.301/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.huawei.hms/ui/4.0.3.301/da39a3ee5e6b4b0d3255bfef95601890afd80709/ui-4.0.3.301-javadoc.jar!/" />

@@ -1,13 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.huawei.hms:network-framework-compat:4.0.20.301@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/537786927a7fbe1db2d3948f03602a60/network-framework-compat-4.0.20.301/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/537786927a7fbe1db2d3948f03602a60/network-framework-compat-4.0.20.301/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/537786927a7fbe1db2d3948f03602a60/network-framework-compat-4.0.20.301/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/537786927a7fbe1db2d3948f03602a60/jetified-network-framework-compat-4.0.20.301/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cea61928210d4bce154d903495fb0d7f/jetified-network-framework-compat-4.0.20.301/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cea61928210d4bce154d903495fb0d7f/jetified-network-framework-compat-4.0.20.301/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cea61928210d4bce154d903495fb0d7f/jetified-network-framework-compat-4.0.20.301/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/36d58ed42b9749b3fbf9c8510ebc0182/transformed/jetified-network-framework-compat-4.0.20.301/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/36d58ed42b9749b3fbf9c8510ebc0182/transformed/jetified-network-framework-compat-4.0.20.301/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/36d58ed42b9749b3fbf9c8510ebc0182/transformed/jetified-network-framework-compat-4.0.20.301/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
