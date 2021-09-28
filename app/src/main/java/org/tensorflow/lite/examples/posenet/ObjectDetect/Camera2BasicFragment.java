@@ -78,6 +78,7 @@ import com.google.android.gms.vision.face.Face;
 import com.google.android.gms.vision.face.FaceDetector;
 
 import org.tensorflow.lite.examples.posenet.R;
+import org.tensorflow.lite.examples.posenet.poseestimate.ImageClassifier2;
 
 import java.io.File;
 import java.io.FileOutputStream;

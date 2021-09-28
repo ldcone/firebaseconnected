@@ -47,7 +47,7 @@ class CameraActivity : AppCompatActivity() {
     setContentView(R.layout.tfe_pn_activity_camera)
     checkPermissions()
     savedInstanceState ?: supportFragmentManager.beginTransaction()
-      .replace(R.id.container, PosenetActivity())
+      .replace(R.id.container,PosenetActivity())
       .commit()
   }
 

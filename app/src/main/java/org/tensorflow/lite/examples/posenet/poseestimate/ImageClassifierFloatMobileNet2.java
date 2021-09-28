@@ -13,16 +13,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package org.tensorflow.lite.examples.posenet.ObjectDetect;
+package org.tensorflow.lite.examples.posenet.poseestimate;
 
 import android.app.Activity;
 
-import org.tensorflow.lite.examples.posenet.poseestimate.ImageClassifier2;
+import org.tensorflow.lite.examples.posenet.ObjectDetect.ImageClassifier;
 
 import java.io.IOException;
 
 /** This classifier works with the float MobileNet model. */
-public class ImageClassifierFloatMobileNet extends ImageClassifier {
+public class ImageClassifierFloatMobileNet2 extends ImageClassifier2 {
 
   /**
    * An array to hold inference results, to be feed into Tensorflow Lite as outputs. This isn't part
@@ -35,7 +35,7 @@ public class ImageClassifierFloatMobileNet extends ImageClassifier {
    *
    * @param activity
    */
-  ImageClassifierFloatMobileNet(Activity activity) throws IOException {
+  ImageClassifierFloatMobileNet2(Activity activity) throws IOException {
     super(activity);
     labelProbArray = new float[1][getNumLabels()];
   }
