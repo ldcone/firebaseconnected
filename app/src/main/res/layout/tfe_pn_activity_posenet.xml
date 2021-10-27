@@ -39,7 +39,7 @@
 
   <RelativeLayout
       android:layout_width="match_parent"
-      android:layout_height="450dp"
+      android:layout_height="530dp"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="72dp"
       android:background="@drawable/border_layout">
@@ -88,7 +88,7 @@
       tools:ignore="SpeakableTextPresentCheck" />
 
   <ImageView
-      android:id="@+id/img_captured"
+      android:id="@+id/img_captured2"
       android:layout_width="100dp"
       android:layout_height="100dp"
       android:layout_alignParentEnd="true"

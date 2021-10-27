@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.huawei.hms:device:4.0.3.301@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6e678efa24f10e1099a718ae9d6cdf98/transformed/jetified-device-4.0.3.301/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e678efa24f10e1099a718ae9d6cdf98/transformed/jetified-device-4.0.3.301/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e678efa24f10e1099a718ae9d6cdf98/transformed/jetified-device-4.0.3.301/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6607383ae99eb683e6d73d7c7cac97fb/transformed/jetified-device-4.0.3.301/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6607383ae99eb683e6d73d7c7cac97fb/transformed/jetified-device-4.0.3.301/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6607383ae99eb683e6d73d7c7cac97fb/transformed/jetified-device-4.0.3.301/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.huawei.hms/device/4.0.3.301/da39a3ee5e6b4b0d3255bfef95601890afd80709/device-4.0.3.301-javadoc.jar!/" />

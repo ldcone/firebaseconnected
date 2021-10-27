@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.huawei.hms:dynamic-api:1.0.13.303@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ab30d35b1cc3794cba2d5c2f7e81d20f/transformed/jetified-dynamic-api-1.0.13.303/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ab30d35b1cc3794cba2d5c2f7e81d20f/transformed/jetified-dynamic-api-1.0.13.303/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ab30d35b1cc3794cba2d5c2f7e81d20f/transformed/jetified-dynamic-api-1.0.13.303/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5addd652db1c125134108e012d90c3ba/transformed/jetified-dynamic-api-1.0.13.303/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5addd652db1c125134108e012d90c3ba/transformed/jetified-dynamic-api-1.0.13.303/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5addd652db1c125134108e012d90c3ba/transformed/jetified-dynamic-api-1.0.13.303/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.huawei.hms/dynamic-api/1.0.13.303/da39a3ee5e6b4b0d3255bfef95601890afd80709/dynamic-api-1.0.13.303-javadoc.jar!/" />

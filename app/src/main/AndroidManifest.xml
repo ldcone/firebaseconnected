@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="org.tensorflow.lite.examples.posenet">
+  <uses-permission android:name="android.permission.INTERNET"/>
 
   <uses-permission android:name="android.permission.CAMERA" />
 
@@ -24,14 +25,34 @@
       android:theme="@style/AppTheme.Posenet">
 
     <activity
-        android:name=".poseestimate.CameraActivity"
-        android:label="@string/tfe_pn_app_name"
+        android:name=".LoginActivity"
+        android:label="ICare"
         android:exported="true">
     <intent-filter>
       <action android:name="android.intent.action.MAIN"/>
       <category android:name="android.intent.category.LAUNCHER"/>
     </intent-filter>
   </activity>
+
+
+    <activity
+        android:name=".MainActivity"
+        android:label="@string/tfe_pn_app_name"
+        android:exported="true"/>
+
+    <activity
+        android:name=".poseestimate.CameraActivity"
+        android:label="@string/tfe_pn_app_name"
+        android:exported="true"/>
+    <activity
+        android:name=".SignupActivity"
+        android:label="@string/tfe_pn_app_name"
+        android:exported="true"/>
+
+    <activity
+        android:name=".SelectActivity"
+        android:label="@string/tfe_pn_app_name"
+        android:exported="true"/>
 
     <activity android:name=".poseestimate.TestActivity"/>
 

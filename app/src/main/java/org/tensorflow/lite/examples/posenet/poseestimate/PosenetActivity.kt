@@ -47,12 +47,10 @@ import com.google.android.gms.vision.face.Face
 import com.google.android.gms.vision.face.FaceDetector
 import com.google.android.gms.vision.face.FaceDetector.ALL_CLASSIFICATIONS
 import com.google.android.gms.vision.face.FaceDetector.NO_LANDMARKS
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
 import com.google.gson.Gson
 import com.huawei.hms.mlsdk.sounddect.MLSoundDectListener
 import com.huawei.hms.mlsdk.sounddect.MLSoundDector
-import kotlinx.android.synthetic.main.tfe_pn_activity_posenet.*
+
 import okhttp3.*
 import org.tensorflow.lite.examples.posenet.*
 import org.tensorflow.lite.examples.posenet.ObjectDetect.Camera2BasicFragment.saveBitmap
@@ -103,8 +101,8 @@ class PosenetActivity :
   private var paint = Paint()
 
   /** A shape for extracting frame data.   */
-  private val PREVIEW_WIDTH = 640
-  private val PREVIEW_HEIGHT = 360
+  private val PREVIEW_WIDTH = 320
+  private val PREVIEW_HEIGHT = 180
 //  private val PREVIEW_HEIGHT = 1080
 //  private val PREVIEW_WIDTH = 1920
 
@@ -151,7 +149,6 @@ class PosenetActivity :
 
   private var y5 = mutableListOf(0,0,0)
 
-  lateinit var firebaseStorage: FirebaseStorage//파이어베이스 스토리지 선언
 
   private var con = activity?.applicationContext
   var mlSoundDetector: MLSoundDector = MLSoundDector.createSoundDector()
@@ -244,13 +241,14 @@ class PosenetActivity :
   private var mBinding: TfePnActivityPosenetBinding? = null
   private val binding get() = mBinding!!
 
+
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
     mBinding = TfePnActivityPosenetBinding.inflate(layoutInflater, container, false)
-    binding.imgCaptured.visibility = View.VISIBLE
+//    binding.imgCaptured.visibility = View.VISIBLE
 
 //    binding.btnTake.setOnClickListener {
 //      //surfaceview 캡처
@@ -281,6 +279,7 @@ class PosenetActivity :
 //      }
 //    }
 
+    //아기울음소리 감지
     mlSoundDetector.setSoundDectListener(object : MLSoundDectListener {
       override fun onSoundSuccessResult(result: Bundle) {
         val soundType = result.getInt(MLSoundDector.RESULTS_RECOGNIZED)
@@ -298,6 +297,7 @@ class PosenetActivity :
 
     return binding.root
   }
+  //현재
   private fun takepicture(bitmap: Bitmap){
     Log.d("캡처", "$bitmap")
 
@@ -345,6 +345,7 @@ class PosenetActivity :
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     surfaceView = view.findViewById(R.id.surfaceView)
+    imageview = view.findViewById(R.id.img_captured2)
     surfaceHolder = surfaceView!!.holder
     gpu = getString(R.string.gpu)
     cpu = getString(R.string.cpu)
@@ -352,7 +353,7 @@ class PosenetActivity :
     mobilenetV1Quant = getString(R.string.mobilenetV1Quant)
     mobilenetV1Float = getString(R.string.mobilenetV1Float)
     textView = view.findViewById<View>(R.id.text) as TextView
-    imageview = view.findViewById(R.id.img_captured)
+//    imageview = view.findViewById(R.id.img_captured)
 
     val deviceStrings = ArrayList<String?>()
     val modelStrings = ArrayList<String?>()
@@ -374,7 +375,7 @@ class PosenetActivity :
       deviceStrings.add(gpu)
     }
     deviceStrings.add(nnApi)
-
+    //faceDetector를 열어서 준비해둠
     faceDetector = FaceDetector.Builder(this.requireContext())
       .setMode(FaceDetector.FAST_MODE)
       .setTrackingEnabled(false)
@@ -414,14 +415,16 @@ class PosenetActivity :
 
   override fun onResume() {
     super.onResume()
-//    mlSoundDetector.start(requireActivity())
+    //oncreateview에서 준비해둔 mlsoundDetector를 시작해줌
+    mlSoundDetector.start(requireActivity())
+    //백그라운드 스레드에서 이미지처리를 진행함
     startBackgroundThread()
   }
 
   override fun onStart() {
     super.onStart()
     openCamera()
-
+    //자세추정 시작
     posenet = Posenet(this.requireContext())
   }
 
@@ -508,7 +511,6 @@ class PosenetActivity :
         ) {
           continue
         }
-
 
         previewSize = Size(PREVIEW_WIDTH, PREVIEW_HEIGHT)
 
@@ -668,8 +670,12 @@ class PosenetActivity :
         rgbBytes, previewWidth, previewHeight,
         Bitmap.Config.ARGB_8888
       )
-
-
+//  private val PREVIEW_HEIGHT = 1080
+//  private val PREVIEW_WIDTH = 1920
+//      val imageBitmap2 = Bitmap.createBitmap(
+//        rgbBytes, 1920, 1080,
+//        Bitmap.Config.ARGB_8888
+//      )
 
       // Create rotated version for portrait display
       val rotateMatrix = Matrix()
@@ -716,7 +722,7 @@ class PosenetActivity :
 
   private fun handlerTest(bitmap: Bitmap){
     val handler: Handler = object :Handler(Looper.getMainLooper()){
-      override fun handleMessage(msg: Message?) {
+      override fun handleMessage(msg: Message) {
         val ob = BitmapDrawable(resources,bitmap)
         Log.d("handlermessage","done")
         imageview!!.background = ob
@@ -733,6 +739,7 @@ class PosenetActivity :
     if(classifier == null || activity == null || cameraDevice == null){
       return
     }
+
     val textToShow = SpannableStringBuilder()
     val frame: Frame = Frame.Builder().setBitmap(bitmap).build()
     faces = faceDetector!!.detect(frame)
@@ -746,6 +753,7 @@ class PosenetActivity :
         Math.round(face.width + face.position.x),
         Math.round(face.position.y + face.height)
       )
+
       assert(rect.left < rect.right && rect.top < rect.bottom)
       //  Create our resulting image (150--50),(75--25) = 200x100px
       val resultBmp = Bitmap.createBitmap(
@@ -758,7 +766,15 @@ class PosenetActivity :
       //  draw source bitmap into resulting image at given position:
       Canvas(resultBmp).drawBitmap(bitmap, -rect.left.toFloat(), -rect.top.toFloat(), null)
       val resized = Bitmap.createScaledBitmap(resultBmp, 48, 48, true)
-      saveBitmap(resized, "preview.png")
+//      handlerTest(resized)
+      val runnable = Runnable {
+        kotlin.run {
+          saveBitmap(resized, "preview.png")
+        }
+      }
+
+
+
       classifier!!.classifyFrame(resized,textToShow)
       Log.i(TAG, "faceid " + face.getPosition().x)
       Log.i(TAG, "faceid " + face.getPosition().y)
@@ -768,6 +784,7 @@ class PosenetActivity :
     showToast2(textToShow)
 
   }
+
   var currentNumThreads = 10
 
   private fun updateActiveModel() {
@@ -922,17 +939,18 @@ class PosenetActivity :
     // Draw key points over the image.
     for (keyPoint in person.keyPoints) {
       if (keyPoint.score > minConfidence) {
+        var check = true
         val position = keyPoint.position
         val adjustedX: Float = position.x.toFloat() * widthRatio + left
         val adjustedY: Float = position.y.toFloat() * heightRatio + top
         canvas.drawCircle(adjustedX, adjustedY, circleRadius, paint)
-        y1.add(0,position.y)
 
         if(keyPoint.bodyPart.toString()== "RIGHT_EAR") {
           y1.add(0, position.y)
           println(position.y)
           println(y1[1])
-          if (y1[2] - position.y > 40) {
+          if (position.y - y1[1]   > 20 && check && y1[1]!=0) {
+            check =false
             canvas.drawText(
               "falldetect",
               (15.0f * widthRatio),
@@ -946,9 +964,11 @@ class PosenetActivity :
 
         if(keyPoint.bodyPart.toString()== "LEFT_EAR") {
           y2.add(0, position.y)
+          Log.d("Left_Ear",Integer.toString(y2[2])+ "-"+position.y);
           println(position.y)
           println(y2[1])
-          if (y2[2] - position.y > 40) {
+          if (position.y - y2[1]   > 20 && check && y2[1]!=0) {
+            check =false
             canvas.drawText(
               "falldetect",
               (15.0f * widthRatio),
@@ -964,7 +984,8 @@ class PosenetActivity :
           y3.add(0, position.y)
           println(position.y)
           println(y3[2])
-          if (y3[2] - position.y > 30) {
+          if (position.y - y3[1]   > 20 && check && y3[1]!=0) {
+            check =false
             canvas.drawText(
               "falldetect",
               (15.0f * widthRatio),
@@ -976,13 +997,12 @@ class PosenetActivity :
           }
         }
 
-
-
         if(keyPoint.bodyPart.toString()=="LEFT_EYE") {
           y4.add(0, position.y)
           println(position.y)
           println(y4[2])
-          if (y4[2] - position.y > 30) {
+          if (position.y - y4[1]   > 20 && check && y4[1]!=0) {
+            check =false
             canvas.drawText(
               "falldetect",
               (15.0f * widthRatio),
@@ -997,9 +1017,11 @@ class PosenetActivity :
 
         if(keyPoint.bodyPart.toString()=="NOSE"){
           y5.add(0,position.y)
-          println(position.y)
-          println(y5[2])
-          if(y5[2] - position.y > 40){
+          Log.d("list_nose1", y5[0].toString())
+          Log.d("list_nose2", y5[1].toString())
+          Log.d("list_nose3", y5[2].toString())
+          if(position.y - y5[1]   > 20 && check && y5[1]!=0){
+            Log.d("list_nose_falldetect","detect")
             canvas.drawText(
               "falldetected",
               (15.0f * widthRatio),

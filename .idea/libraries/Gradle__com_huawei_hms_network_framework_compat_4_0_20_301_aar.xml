@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.huawei.hms:network-framework-compat:4.0.20.301@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/36d58ed42b9749b3fbf9c8510ebc0182/transformed/jetified-network-framework-compat-4.0.20.301/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/36d58ed42b9749b3fbf9c8510ebc0182/transformed/jetified-network-framework-compat-4.0.20.301/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/36d58ed42b9749b3fbf9c8510ebc0182/transformed/jetified-network-framework-compat-4.0.20.301/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6ed30c891e33b43e88f62238b41469c7/transformed/jetified-network-framework-compat-4.0.20.301/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6ed30c891e33b43e88f62238b41469c7/transformed/jetified-network-framework-compat-4.0.20.301/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6ed30c891e33b43e88f62238b41469c7/transformed/jetified-network-framework-compat-4.0.20.301/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
